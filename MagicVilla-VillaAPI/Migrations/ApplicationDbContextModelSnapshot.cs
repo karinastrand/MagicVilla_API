@@ -17,7 +17,7 @@ namespace MagicVilla_VillaAPI.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.5")
+                .HasAnnotation("ProductVersion", "8.0.6")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -31,14 +31,12 @@ namespace MagicVilla_VillaAPI.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Amenity")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreateDate")
+                    b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Details")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
@@ -58,7 +56,7 @@ namespace MagicVilla_VillaAPI.Migrations
                     b.Property<int>("Sqft")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("UpdateDate")
+                    b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -70,67 +68,102 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 1,
                             Amenity = "",
-                            CreateDate = new DateTime(2024, 5, 20, 17, 42, 45, 824, DateTimeKind.Local).AddTicks(875),
+                            CreatedDate = new DateTime(2024, 6, 4, 9, 13, 27, 817, DateTimeKind.Local).AddTicks(4136),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                            ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa3.jpg",
+                            ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa3.jpg",
                             Name = "Royal Villa",
                             Occupancy = 4,
                             Rate = 200.0,
                             Sqft = 550,
-                            UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            UpdatedDate = new DateTime(2024, 6, 4, 9, 13, 27, 817, DateTimeKind.Local).AddTicks(4131)
                         },
                         new
                         {
                             Id = 2,
                             Amenity = "",
-                            CreateDate = new DateTime(2024, 5, 20, 17, 42, 45, 824, DateTimeKind.Local).AddTicks(919),
+                            CreatedDate = new DateTime(2024, 6, 4, 9, 13, 27, 817, DateTimeKind.Local).AddTicks(4142),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                            ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa1.jpg",
+                            ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa1.jpg",
                             Name = "Premium Pool Villa",
                             Occupancy = 4,
                             Rate = 300.0,
                             Sqft = 550,
-                            UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            UpdatedDate = new DateTime(2024, 6, 4, 9, 13, 27, 817, DateTimeKind.Local).AddTicks(4139)
                         },
                         new
                         {
                             Id = 3,
                             Amenity = "",
-                            CreateDate = new DateTime(2024, 5, 20, 17, 42, 45, 824, DateTimeKind.Local).AddTicks(922),
+                            CreatedDate = new DateTime(2024, 6, 4, 9, 13, 27, 817, DateTimeKind.Local).AddTicks(4147),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                            ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa4.jpg",
+                            ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa4.jpg",
                             Name = "Luxury Pool Villa",
                             Occupancy = 4,
                             Rate = 400.0,
                             Sqft = 750,
-                            UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            UpdatedDate = new DateTime(2024, 6, 4, 9, 13, 27, 817, DateTimeKind.Local).AddTicks(4145)
                         },
                         new
                         {
                             Id = 4,
                             Amenity = "",
-                            CreateDate = new DateTime(2024, 5, 20, 17, 42, 45, 824, DateTimeKind.Local).AddTicks(925),
+                            CreatedDate = new DateTime(2024, 6, 4, 9, 13, 27, 817, DateTimeKind.Local).AddTicks(4153),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                            ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa5.jpg",
+                            ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa5.jpg",
                             Name = "Diamond Villa",
                             Occupancy = 4,
                             Rate = 550.0,
                             Sqft = 900,
-                            UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            UpdatedDate = new DateTime(2024, 6, 4, 9, 13, 27, 817, DateTimeKind.Local).AddTicks(4150)
                         },
                         new
                         {
                             Id = 5,
                             Amenity = "",
-                            CreateDate = new DateTime(2024, 5, 20, 17, 42, 45, 824, DateTimeKind.Local).AddTicks(927),
+                            CreatedDate = new DateTime(2024, 6, 4, 9, 13, 27, 817, DateTimeKind.Local).AddTicks(4158),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                            ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa2.jpg",
+                            ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa2.jpg",
                             Name = "Diamond Pool Villa",
                             Occupancy = 4,
                             Rate = 600.0,
                             Sqft = 1100,
-                            UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            UpdatedDate = new DateTime(2024, 6, 4, 9, 13, 27, 817, DateTimeKind.Local).AddTicks(4156)
                         });
+                });
+
+            modelBuilder.Entity("MagicVilla_VillaAPI.Model.VillaNumber", b =>
+                {
+                    b.Property<int>("VillaNo")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SpecialDetails")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("VillaID")
+                        .HasColumnType("int");
+
+                    b.HasKey("VillaNo");
+
+                    b.HasIndex("VillaID");
+
+                    b.ToTable("VillaNumbers");
+                });
+
+            modelBuilder.Entity("MagicVilla_VillaAPI.Model.VillaNumber", b =>
+                {
+                    b.HasOne("MagicVilla_VillaAPI.Model.Villa", "Villa")
+                        .WithMany()
+                        .HasForeignKey("VillaID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Villa");
                 });
 #pragma warning restore 612, 618
         }
